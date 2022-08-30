@@ -51,6 +51,7 @@ struct WidgetWatchEntryView : View {
 
     var body: some View {
         Text(entry.date, style: .time)
+            .widgetURL(URL(string: "abc:def"))
     }
 }
 

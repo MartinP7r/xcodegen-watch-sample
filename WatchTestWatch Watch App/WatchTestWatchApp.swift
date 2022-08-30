@@ -12,6 +12,9 @@ struct WatchTestWatch_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL { url in
+                    print("URL", url.debugDescription)
+                }
         }
     }
 }
