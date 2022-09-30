@@ -20,5 +20,7 @@
 	<string>1</string>
 	<key>PRODUCT_BUNDLE_IDENTIFIER</key>
 	<string>.watchkitapp</string>
+	<key>WKRunsIndependentlyOfCompanionApp</key>
+	<string>0</string>
 </dict>
 </plist>

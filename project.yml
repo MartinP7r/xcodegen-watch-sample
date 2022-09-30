@@ -5,11 +5,11 @@ options:
 
 targets:
   WatchTest:
+    platform: iOS
+    type: application
+    deploymentTarget: "16.0"
     sources:
       - WatchTest
-    type: application
-    platform: iOS
-    deploymentTarget: "16.0"
     settings:
       base:
         INFOPLIST_FILE: "WatchTestWatch Watch App/Info.plist"
@@ -18,27 +18,27 @@ targets:
 
   WatchTestWatch Watch App:
     platform: watchOS
+    type: application
     deploymentTarget: "9.0"
-    type: application.watchapp2
     sources:
       - "WatchTestWatch Watch App"
     settings:
       base:
         INFOPLIST_FILE: "WatchTestWatch Watch App/Info.plist"
         PRODUCT_BUNDLE_IDENTIFIER: ".watchkitapp"
-    dependencies:
-      - target: "WidgetWatch"
+    # dependencies:
+    # - target: "WidgetWatch"
 
-  WidgetWatch:
-    platform: watchOS
-    deploymentTarget: "9.0"
-    type: app-extension
-    sources:
-      - WidgetWatch
-    settings:
-      base:
-        INFOPLIST_FILE: WidgetWatch/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: ".WidgetWatch"
-    dependencies:
-      - sdk: SwiftUI.framework
-      - sdk: WidgetKit.framework
+  # WidgetWatch:
+  #   platform: watchOS
+  #   deploymentTarget: "9.0"
+  #   type: app-extension
+  #   sources:
+  #     - WidgetWatch
+  #   settings:
+  #     base:
+  #       INFOPLIST_FILE: WidgetWatch/Info.plist
+  #       PRODUCT_BUNDLE_IDENTIFIER: ".WidgetWatch"
+  #   dependencies:
+  #     - sdk: SwiftUI.framework
+  #     - sdk: WidgetKit.framework
